@@ -3,16 +3,24 @@
 A real-time stock price tracking application built using **SwiftUI**, **Combine**, **SwiftData**, and **MVVM** architecture. The app fetches real-time stock price data from an external API and updates the UI every 5 seconds with the latest prices, showing price increases and decreases with appropriate icons.
 
 ### Home Screen
+<div style="display: flex; justify-content: center;">
 <img src="images/stocklist_dark.png" alt="Stock App Screenshot" width="200">
 <img src="images/stocklist_light.png" alt="Stock App Screenshot" width="200">
+</div>
+
 
 ### WishList Screen
+<div style="display: flex; justify-content: center;">
 <img src="images/wishlist_dark.png" alt="Stock App Screenshot" width="200">
 <img src="images/wishlist_light.png" alt="Stock App Screenshot" width="200">
+</div>
+
 
 ### Details Screen
+<div style="display: flex; justify-content: center;">
 <img src="images/details_dark.png" alt="Stock App Screenshot" width="200">
 <img src="images/details_light.png" alt="Stock App Screenshot" width="200">
+</div>
 
 
 ## Features

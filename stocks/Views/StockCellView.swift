@@ -54,10 +54,10 @@ struct StockCellView: View {
         VStack(alignment: .leading, spacing: 4) {
             Text(stock.sid)
             
-            Text(stock.change, format: .number)
+            Label(title: { Text(stock.change, format: .number) }, icon: { changeIndicatorIcon })
                 .font(.callout)
                 .fontWeight(.medium)
-                .foregroundStyle(.white)
+                .foregroundStyle(.background)
                 .padding(.horizontal)
                 .frame(height: 24)
                 .background {
@@ -66,6 +66,14 @@ struct StockCellView: View {
                 }
         }
         .frame(height: 50)
+    }
+    
+    /// This returns the view to represent positive or negetive change in stock price
+    var changeIndicatorIcon: some View {
+        Image(systemName: "triangle.fill")
+            .resizable()
+            .frame(width: 8, height: 8)
+            .rotationEffect(.degrees(stock.change > 0 ? 0 : 180))
     }
     
     /// This returns the price and volume info view
@@ -124,9 +132,12 @@ struct StockCellView: View {
     Group {
         StockCellView(stock: stock)
             .modelContainer(modelContainer)
+            .environmentObject(StockDataStore(modelContext: modelContainer.mainContext))
         
         StockCellView(stock: stock)
             .modelContainer(for: Stock.self, inMemory: true)
+            .environmentObject(StockDataStore(modelContext: modelContainer.mainContext))
+            
     }
     .padding()
 }

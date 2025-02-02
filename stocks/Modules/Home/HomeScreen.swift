@@ -19,13 +19,14 @@ struct HomeScreen: View {
                     StocklistScreen(viewModel: StocklistScreenVM(stocksService: stoksService))
                 }
                 
-                Tab("Liked Stocks", systemImage: "heart") {
+                Tab("Wishlist", systemImage: "heart") {
                     WishlistScreen(viewModel: WishlistScreenVM(stocksService: stoksService))
                 }
             }
             .navigationTitle(Text("Stocks"))
             .navigationBarTitleDisplayMode(.large)
         }
+        .tint(.primary)
         .environmentObject(StockDataStore(modelContext: modelContext))
         
     }

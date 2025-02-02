@@ -21,10 +21,18 @@ struct WishlistScreen: View {
     var body: some View {
         ScrollView {
             ForEach(stocksDataStore.stocks, id: \.sid) { stock in
-                StockCellView(stock: stock)
+                NavigationLink(destination: stockDetailView(stock: stock)) {
+                    StockCellView(stock: stock)
+                }
             }
             .padding()
         }
+    }
+    
+    func stockDetailView(stock: Stock) -> some View {
+        StockDetailScreen(stock: stock,
+                          viewModel: StockDetailVM(stock: stock,
+                                                   stockService: viewModel.stocksService))
     }
 }
 

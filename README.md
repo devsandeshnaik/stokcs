@@ -6,7 +6,6 @@ A real-time stock price tracking application built using **SwiftUI**, **Combine*
 
 - Display a **list of stocks** along with their current prices.
 - Real-time stock price updates by **polling an external API** every 5 seconds.
-- **Price increase and decrease** indicators with corresponding icons.
 - **SwiftUI** for building the UI, ensuring smooth, reactive user experience.
 - **MVVM** architecture for a clean separation of concerns.
 - **Combine** framework for handling real-time data streams and updates.

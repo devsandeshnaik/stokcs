@@ -10,7 +10,7 @@ import Combine
 
 final class WishlistScreenVM: ObservableObject {
     
-    private var stocksService: StocksServiceProtocol
+    var stocksService: StocksServiceProtocol
     
     @Published var stocks: [Stock] = []
     @Published var networkError: NetworkError?

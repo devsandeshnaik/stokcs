@@ -8,12 +8,6 @@
 import SwiftUI
 import SwiftData
 
-//TODO: - 1 Add fav list
-//TODO: - 2 Break big views into small indivial var/func
-//TODO: - 3 Add documentation
-//TODO: - Setup github with read me
-
-
 @main
 struct stocksApp: App {
     
